@@ -16,7 +16,7 @@ app.config([
 
         $stateProvider
             .state('countdown', {
-                url: '/:seconds',
+                url: '/:minutes',
                 templateUrl: './views/countdown.html',
                 controller: 'CountdownCtrl'
             });
@@ -28,22 +28,15 @@ app.controller("HomeCtrl", function ($scope) {
     $scope.message = "message";
 });
 
-//
-app.controller("TitleCtrl", function ($scope, timeService) {
-    $scope.title = timeService.mins;
-});
-
 // Countdown controller
-app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams, timeService) {
+app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams) {
 
     // minutes from url parameter
-    var minutes = $stateParams.seconds;
+    var minutes = $stateParams.minutes;
     // make total seconds
     var seconds = minutes * 60;
 
     // current minutes and seconds to display on page
-    $scope.currentMinutes = timeService.mins;
-    $scope.currentSeconds = timeService.secs;
 
     $scope.paused = false;
 
@@ -81,10 +74,4 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams, timeSe
 
     // start timer on page load
     $timeout($scope.countdown, 1000);
-});
-
-app.factory("timeService", function() {
-    var timeService = {};
-
-    return timeService;
 });
