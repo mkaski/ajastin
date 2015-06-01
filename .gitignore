@@ -30,3 +30,7 @@ Icon
 
 # Bower components
 /bower_components/
+
+#Npm
+
+/node_modules/

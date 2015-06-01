@@ -36,8 +36,7 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams) {
     // make total seconds
     var seconds = minutes * 60;
 
-    // current minutes and seconds to display on page
-
+    // paused state
     $scope.paused = false;
 
     // countdown function, count down if seconds > 0 and counter is not paused
@@ -50,7 +49,7 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams) {
             $timeout($scope.countdown, 1000);
         }
         else if (seconds <= 0){
-            $scope.timeUp();
+            timeUp();
         }
     };
 
@@ -67,8 +66,20 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams) {
         }
     };
 
-    // watch if time is up
-    $scope.timeUp = function() {
+    // add minute
+    $scope.addTime = function() {
+        seconds = seconds + 30;
+    };
+
+    // take minute
+    $scope.reduceTime = function() {
+        if (seconds > 30) {
+            seconds -= 30;
+        }
+    };
+
+    // time is up
+    var timeUp = function() {
         alert("Aika loppu!");
     };
 
