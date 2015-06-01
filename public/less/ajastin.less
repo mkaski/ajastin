@@ -1,0 +1,87 @@
+@baseColor  : #EA6772;
+@red-darker : darken(@baseColor,10%);
+@red-dim    : darken(@baseColor,5%);
+
+
+a:hover {
+  color:#fff;
+}
+
+label {
+  margin:0;
+}
+
+.container {
+  max-width:1000px;
+  margin-top:100px;
+}
+
+.header {
+  height:200px;
+  background: @baseColor;
+}
+
+.logo {
+  text-align: center;
+    img {
+      line-height: 200px;
+      vertical-align: middle;
+      max-width: 100%;
+      padding-top:50px;
+    }
+}
+
+.time, .user {
+  font-size:120px;
+  line-height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  color:@baseColor;
+  font-weight: 700;
+  height:200px;
+}
+
+.controller {
+  background: @baseColor;
+  color:#fff;
+  text-align: center;
+  height:200px;
+  padding-top:74px;
+  font-size:44px;
+  font-weight: 800;
+
+  i {
+    font-size:44px;
+  }
+}
+.controller:hover {
+  .radial
+}
+
+.user {
+  input {
+    width:100%;
+    border:0;
+    outline:none;
+    padding:0;
+  }
+
+}
+
+.radial(@innerColor: @baseColor, @outerColor: @red-dim, @pos: center, @colorStop: 100%)  {
+  background-image: -moz-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // FF 3.6+
+  background-image: -ms-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // IE10
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor)); // Android 2.3, Safari 4+, Chrome 2+
+  background-image: -webkit-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // Safari 5.1+, Chrome 10+
+  background-image: -o-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // Opera 11.10
+}
+
+
+.gradient (@startColor: @baseColor, @endColor: @red-darker) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}

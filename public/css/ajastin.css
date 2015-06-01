@@ -1,0 +1,58 @@
+a:hover {
+  color: #fff;
+}
+label {
+  margin: 0;
+}
+.container {
+  max-width: 1000px;
+  margin-top: 100px;
+}
+.header {
+  height: 200px;
+  background: #ea6772;
+}
+.logo {
+  text-align: center;
+}
+.logo img {
+  line-height: 200px;
+  vertical-align: middle;
+  max-width: 100%;
+  padding-top: 50px;
+}
+.time,
+.user {
+  font-size: 120px;
+  line-height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  color: #ea6772;
+  font-weight: 700;
+  height: 200px;
+}
+.controller {
+  background: #ea6772;
+  color: #fff;
+  text-align: center;
+  height: 200px;
+  padding-top: 74px;
+  font-size: 44px;
+  font-weight: 800;
+}
+.controller i {
+  font-size: 44px;
+}
+.controller:hover {
+  background-image: -moz-radial-gradient(center, circle, #ea6772, #e7515d 100%);
+  background-image: -ms-radial-gradient(center, circle, #ea6772, #e7515d 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#ea6772), to(#e7515d));
+  background-image: -webkit-radial-gradient(center, circle, #ea6772, #e7515d 100%);
+  background-image: -o-radial-gradient(center, circle, #ea6772, #e7515d 100%);
+}
+.user input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  padding: 0;
+}

@@ -1,8 +1,28 @@
 
-{{ currentMinutes }} : <span ng-if="currentSeconds < 10">0</span>{{ currentSeconds }}
+<div class="container">
 
-<button ng-click="pause()">Pause</button>
-<button ng-click="start()">Start</button>
+    <div class="row header">
+        <div class="col-xs-3 controller">
+            <i class="fa fa-volume-up"></i>
+        </div>
+        <div class="col-xs-6 logo">
+            <img src="http://ajast.in/ajastin-logo.png" alt="Ajastin logo"/>
+        </div>
+        <div class="col-xs-3 controller">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+    </div>
 
-<button ng-click="addTime()">+++</button>
-<button ng-click="reduceTime()">---</button>
+    <div class="row">
+        <div class="time">
+            {{ currentMinutes }} : <span ng-if="currentSeconds < 10">0</span>{{ currentSeconds }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3 controller" ng-click="pause()"><i class="fa fa-pause"></i></div>
+        <div class="col-xs-3 controller" ng-click="start()"><i class="fa fa-play"></i></div>
+        <div class="col-xs-3 controller" ng-click="addTime()"><i class="fa fa-plus"></i></div>
+        <div class="col-xs-3 controller" ng-click="reduceTime()"><i class="fa fa-minus"></i></div>
+    </div>
+</div>

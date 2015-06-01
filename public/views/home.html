@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row header">
+        <div class="col-xs-3 controller">
+            <i class="fa fa-volume-up"></i>
+        </div>
+        <div class="col-xs-6 logo">
+            <img src="http://ajast.in/ajastin-logo.png" alt="Ajastin logo"/>
+        </div>
+        <div class="col-xs-3 controller">
+            <!-- <i class="fa fa-arrow-left"></i> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="">
+            <label class="col-xs-3 controller" for="minutes">
+                <i class="fa fa-clock-o"></i> :
+            </label>
+            <div class="col-xs-7 user">
+                <input type="text" placeholder="min" id="minutes" ng-model="minutes"/>
+            </div>
+            <a href="#/{{minutes}}" class="col-xs-2 controller">
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3 controller" ng-click="minutes = 5">5 min</div>
+        <div class="col-xs-3 controller" ng-click="minutes = 10">10 min</div>
+        <div class="col-xs-3 controller" ng-click="minutes = 15">15 min</div>
+        <div class="col-xs-3 controller" ng-click="minutes = 30">30 min</div>
+    </div>
+</div>
