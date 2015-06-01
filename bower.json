@@ -1,0 +1,21 @@
+{
+  "name": "Ajastin",
+  "version": "0.0.0",
+  "authors": [
+    "mkaski <msjkas@utu.fi>"
+  ],
+  "description": "Timer app",
+  "main": "ajastin.js",
+  "license": "MIT",
+  "homepage": "http://ajast.in",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
