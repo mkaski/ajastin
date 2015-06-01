@@ -27,3 +27,6 @@ Icon
 .DocumentRevisions-V100 .fseventsd .Spotlight-V100 .TemporaryItems .Trashes .VolumeIcon.icns
 # Directories potentially created on remote AFP share
 .AppleDB .AppleDesktop Network Trash Folder Temporary Items .apdisk
+
+# Bower components
+/bower_components/
