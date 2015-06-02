@@ -6,11 +6,11 @@ label {
 }
 .container {
   max-width: 1000px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .header {
   height: 200px;
-  background: #ea6772;
+  background: #c4606f;
 }
 .logo {
   text-align: center;
@@ -27,12 +27,12 @@ label {
   line-height: 200px;
   vertical-align: middle;
   text-align: center;
-  color: #ea6772;
+  color: #c4606f;
   font-weight: 700;
   height: 200px;
 }
 .controller {
-  background: #ea6772;
+  background: #c4606f;
   color: #fff;
   text-align: center;
   height: 200px;
@@ -43,16 +43,29 @@ label {
 .controller i {
   font-size: 44px;
 }
-.controller:hover {
-  background-image: -moz-radial-gradient(center, circle, #ea6772, #e7515d 100%);
-  background-image: -ms-radial-gradient(center, circle, #ea6772, #e7515d 100%);
-  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#ea6772), to(#e7515d));
-  background-image: -webkit-radial-gradient(center, circle, #ea6772, #e7515d 100%);
-  background-image: -o-radial-gradient(center, circle, #ea6772, #e7515d 100%);
+.controller:hover,
+.active {
+  background-image: -moz-radial-gradient(center, circle, #c4606f, #bd4d5e 100%);
+  background-image: -ms-radial-gradient(center, circle, #c4606f, #bd4d5e 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#c4606f), to(#bd4d5e));
+  background-image: -webkit-radial-gradient(center, circle, #c4606f, #bd4d5e 100%);
+  background-image: -o-radial-gradient(center, circle, #c4606f, #bd4d5e 100%);
+  cursor: pointer;
 }
 .user input {
   width: 100%;
   border: 0;
   outline: none;
   padding: 0;
+}
+.sound div {
+  font-size: 16px;
+}
+.small {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+}
+.small :hover {
+  cursor: auto;
 }

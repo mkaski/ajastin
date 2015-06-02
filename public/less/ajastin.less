@@ -1,4 +1,4 @@
-@baseColor  : #EA6772;
+@baseColor  : #C4606F;
 @red-darker : darken(@baseColor,10%);
 @red-dim    : darken(@baseColor,5%);
 
@@ -13,7 +13,7 @@ label {
 
 .container {
   max-width:1000px;
-  margin-top:100px;
+  margin-top:50px;
 }
 
 .header {
@@ -54,8 +54,9 @@ label {
     font-size:44px;
   }
 }
-.controller:hover {
-  .radial
+.controller:hover, .active {
+  .radial;
+  cursor:pointer;
 }
 
 .user {
@@ -66,6 +67,18 @@ label {
     padding:0;
   }
 
+}
+
+.sound {
+  div {
+    font-size:16px;
+  }
+}
+
+.small {
+  font-size:12px;
+  font-weight: 400;
+  text-align: left;
 }
 
 .radial(@innerColor: @baseColor, @outerColor: @red-dim, @pos: center, @colorStop: 100%)  {

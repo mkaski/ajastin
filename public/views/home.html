@@ -1,12 +1,18 @@
 <div class="container">
     <div class="row header">
-        <div class="col-xs-3 controller">
-            <i class="fa fa-volume-up"></i>
+        <div class="col-xs-3 controller sound" ng-click="sound.setSound()">
+            <i class="fa fa-volume-up" ng-if="sound.getSound()"></i>
+            <div ng-if="sound.getSound()">SOUND ON</div>
+            <i class="fa fa-volume-off" ng-if="!sound.getSound()"></i>
+            <div ng-if="!sound.getSound()">SOUND OFF</div>
         </div>
         <div class="col-xs-6 logo">
             <img src="http://ajast.in/ajastin-logo.png" alt="Ajastin logo"/>
         </div>
-        <div class="col-xs-3 controller">
+        <div class="col-xs-3 controller small">
+            <p class="">
+                AJAST.IN on javascript-pohjainen ajastin, joka laskee aikaa ja hälyttää kun aika on loppu.
+            </p>
             <!-- <i class="fa fa-arrow-left"></i> -->
         </div>
     </div>
@@ -16,10 +22,10 @@
             <label class="col-xs-3 controller" for="minutes">
                 <i class="fa fa-clock-o"></i> :
             </label>
-            <div class="col-xs-7 user">
+            <div class="col-xs-6 user">
                 <input type="text" placeholder="min" id="minutes" ng-model="minutes"/>
             </div>
-            <a href="#/{{minutes}}" class="col-xs-2 controller">
+            <a href="#/{{minutes}}" class="col-xs-3 controller">
                 <i class="fa fa-arrow-right"></i>
             </a>
         </div>
