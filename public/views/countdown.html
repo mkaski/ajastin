@@ -9,11 +9,11 @@
             <div ng-if="!sound.getSound()">SOUND OFF</div>
         </div>
         <div class="col-xs-6 logo">
-            <img src="http://ajast.in/ajastin-logo.png" alt="Ajastin logo"/>
+            <img src="ajastin-logo.png" alt="Ajastin logo"/>
         </div>
-        <a class="col-xs-3 controller" href="#/home">
+        <div class="col-xs-3 controller" ui-sref="home" ui-sref-opts="{reload: true}">
             <i class="fa fa-arrow-left"></i>
-        </a>
+        </div>
     </div>
 
     <div class="row">
@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-xs-3 controller" ng-click="pause()" ng-class="paused ? 'active' : ''"><i class="fa fa-pause"></i></div>
         <div class="col-xs-3 controller" ng-click="start()" ng-class="!paused ? 'active' : ''"><i class="fa fa-play"></i></div>
-        <div class="col-xs-3 controller" ng-click="addTime()"><i class="fa fa-plus"></i></div>
-        <div class="col-xs-3 controller" ng-click="reduceTime()"><i class="fa fa-minus"></i></div>
+        <div class="col-xs-3 controller" ng-click="addTime()"><i class="fa fa-plus"></i> 30s</div>
+        <div class="col-xs-3 controller" ng-click="reduceTime()"><i class="fa fa-minus"></i> 30s</div>
     </div>
 </div>

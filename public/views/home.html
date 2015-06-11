@@ -7,11 +7,11 @@
             <div ng-if="!sound.getSound()">SOUND OFF</div>
         </div>
         <div class="col-xs-6 logo">
-            <img src="http://ajast.in/ajastin-logo.png" alt="Ajastin logo"/>
+            <img src="ajastin-logo.png" alt="Ajastin logo"/>
         </div>
         <div class="col-xs-3 controller small">
             <p class="">
-                AJAST.IN on javascript-pohjainen ajastin, joka laskee aikaa ja hälyttää kun aika on loppu.
+                ajast.in on javascript-pohjainen ajastin, joka laskee aikaa ja hälyttää kun aika on loppu.
             </p>
             <!-- <i class="fa fa-arrow-left"></i> -->
         </div>
@@ -25,9 +25,9 @@
             <div class="col-xs-6 user">
                 <input type="text" placeholder="min" id="minutes" ng-model="minutes"/>
             </div>
-            <a href="#/{{minutes}}" class="col-xs-3 controller">
+            <div ui-sref="countdown({minutes:minutes})" ui-sref-opts="{reload: true}" class="col-xs-3 controller">
                 <i class="fa fa-arrow-right"></i>
-            </a>
+            </div>
         </div>
     </div>
 

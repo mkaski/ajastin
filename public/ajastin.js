@@ -45,7 +45,8 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams, Sound)
 
     // countdown function, count down if seconds > 0 and counter is not paused
     $scope.countdown = function () {
-
+        // testing
+        console.log("x");
         $scope.currentMinutes = Math.floor(seconds / 60);
         $scope.currentSeconds = seconds % 60;
         if (seconds > 0 && !$scope.paused) {
@@ -54,6 +55,7 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams, Sound)
         }
         else if (seconds <= 0){
             timeUp();
+            return false;
         }
     };
 
