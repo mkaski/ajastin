@@ -111,7 +111,7 @@ app.controller("CountdownCtrl", function ($scope, $timeout, $stateParams, Sound)
         body: $stateParams.minutes + " min kulunut!",
         dir : "ltr"
       };
-      var notification = new Notification("Aika loppu!",options);
+      var notification = new Notification("Aika loppu!", options);
     }
     alert("Aika loppu!");
   };
