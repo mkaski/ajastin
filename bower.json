@@ -1,8 +1,8 @@
 {
   "name": "Ajastin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
-    "mkaski <msjkas@utu.fi>"
+    "mkaski"
   ],
   "description": "Timer app",
   "main": "ajastin.js",
@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15"
   }
 }

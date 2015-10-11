@@ -15,9 +15,14 @@ label {
 }
 .logo {
   text-align: center;
+  background-image: -moz-radial-gradient(center, circle, coral, #ff6c36 100%);
+  background-image: -ms-radial-gradient(center, circle, coral, #ff6c36 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(coral), to(#ff6c36));
+  background-image: -webkit-radial-gradient(center, circle, coral, #ff6c36 100%);
+  background-image: -o-radial-gradient(center, circle, coral, #ff6c36 100%);
+  padding-bottom: 70px;
 }
 .logo img {
-  vertical-align: middle;
   max-width: 100%;
   padding-top: 80px;
 }
@@ -63,8 +68,33 @@ label {
 .sound div {
   font-size: 16px;
 }
-.small {
-  font-size: 12px;
+.small p {
+  font-size: 11px;
   font-weight: 400;
   text-align: left;
+}
+@media (max-width: 767px) {
+  .logo {
+    padding-bottom: 0;
+  }
+  .logo img {
+    padding: 20px 0;
+  }
+  .user {
+    font-size: 30px;
+  }
+  .time {
+    font-size: 60px;
+    line-height: 120px;
+  }
+  .controller {
+    font-size: 30px;
+  }
+  .controller i {
+    font-size: 40px;
+    display: block;
+  }
+  .clock i {
+    display: inline;
+  }
 }

@@ -1,0 +1,35 @@
+
+<div class="container" id="countdown">
+
+    <div class="row header">
+        {{currentMin}}
+        <div class="col-xs-8 col-xs-offset-2 visible-xs logo">
+            <img src="ajastin-logo.png" alt="Ajastin logo"/>
+        </div>
+        <div class="col-sm-3 col-xs-6 controller sound" ng-click="sound.setSound()">
+            <i class="fa fa-volume-up" ng-if="sound.getSound()"></i>
+            <div ng-if="sound.getSound()">SOUND ON</div>
+            <i class="fa fa-volume-off" ng-if="!sound.getSound()"></i>
+            <div ng-if="!sound.getSound()">SOUND OFF</div>
+        </div>
+        <div class="col-sm-6 logo hidden-xs">
+            <img src="ajastin-logo.png" alt="Ajastin logo"/>
+        </div>
+        <div class="col-sm-3 col-xs-6 controller" ui-sref="home" ui-sref-opts="{reload: true}">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="time">
+            {{ currentMinutes }} : <span ng-if="currentSeconds < 10">0</span>{{ currentSeconds }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-xs-6 controller" ng-click="pause()" ng-class="paused ? 'active' : ''"><i class="fa fa-pause"></i></div>
+        <div class="col-sm-3 col-xs-6 controller" ng-click="start()" ng-class="!paused ? 'active' : ''"><i class="fa fa-play"></i></div>
+        <div class="col-sm-3 col-xs-6 controller" ng-click="addTime()"><i class="fa fa-plus"></i> 30s</div>
+        <div class="col-sm-3 col-xs-6 controller" ng-click="reduceTime()"><i class="fa fa-minus"></i> 30s</div>
+    </div>
+</div>

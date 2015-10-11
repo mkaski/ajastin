@@ -29,10 +29,11 @@ label {
 .logo {
   text-align: center;
     img {
-      vertical-align: middle;
       max-width: 100%;
       padding-top:80px;
     }
+  .radial;
+  padding-bottom:70px;
 }
 
 .time, .user {
@@ -81,8 +82,8 @@ label {
   }
 }
 
-.small {
-  font-size:12px;
+.small p {
+  font-size:11px;
   font-weight: 400;
   text-align: left;
 }
@@ -103,4 +104,37 @@ label {
   background: -moz-linear-gradient(top, @startColor, @endColor);
   background: -ms-linear-gradient(top, @startColor, @endColor);
   background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+@media (max-width: 767px) {
+
+  .logo {
+    padding-bottom:0;
+    img {
+      padding: 20px 0;
+    }
+  }
+
+  .user {
+    font-size:30px;
+  }
+
+  .time {
+    font-size:60px;
+    line-height:120px;
+  }
+
+    .controller {
+      i {
+        font-size:40px;
+        display: block;
+      }
+      font-size:30px;
+    }
+
+    .clock {
+      i {
+        display:inline;
+      }
+    }
 }
